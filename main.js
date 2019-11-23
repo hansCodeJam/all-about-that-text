@@ -6,30 +6,11 @@ const titleCaseButton = document.querySelector('.titleify');
 const result = document.querySelector('.result');
 const userInput = document.querySelector('#user-input');
 
-const nineThousand = function (){
-    let userInputValue = userInput.value;
-    result.innerText = biggify(Number(userInputValue));
-}
-
-const nasafied = function(){
-    let userInputValue = userInput.value;
-    result.innerText = nasafy(Number(userInputValue));
-}
-
-const crazyFied = function(){
-    let userInputValue = userInput.value;
-    result.innerText = crazify(userInputValue);
-}
-
-const reverseItFied = function() {
-    let userInputValue = userInput.value;
-    result.innerText = reversify(userInputValue);
-}
-
-const titleFied = function() {
-    let userInputValue = userInput.value;
-    result.innerText = titleify(userInputValue);
-}
+const nineThousand = () => result.innerText = biggify(Number(userInput.value));
+const nasafied = () => result.innerText = nasafy(Number(userInput.value));
+const crazyFied = () => result.innerText = crazify(userInput.value);
+const reverseItFied = () => result.innerText = reversify(userInput.value);
+const titleFied = () => result.innerText = titleify(userInput.value);
 
 biggifyButton.addEventListener('click', nineThousand);
 nasafyButton.addEventListener('click', nasafied);
