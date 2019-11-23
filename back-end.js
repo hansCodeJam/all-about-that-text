@@ -19,14 +19,13 @@ const biggify = function(num) {
   }
   
   const titleify = function(str) {
-    let caseWords = [];
-    let splitStr = str.split(' ')
-    
-    for (const word of splitStr) {
-      caseWords.push(word[0].toUpperCase() + word.slice(1).toLowerCase());
+    let answer = []
+    let arr = str.split(' ');
+    for(const word of arr){
+    answer.push((word.split('')[0].toUpperCase()) + word.split('').slice(1).join('').toLowerCase())
+      
     }
-  
-    return caseWords.join(' ');
+    return answer.join(' ')
   }
   
   
